@@ -1,4 +1,4 @@
-package com.hcl.hcllibrary.Constants;
+package com.hcl.hcllibrary.utils;
 
 public class ServiceConstants {
 

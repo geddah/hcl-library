@@ -26,14 +26,16 @@ public class BorrowBook {
 		Long bookId = request.path("bookId").asLong();
 		
 		//Check availability
-		Inventory inventory = inventoryRepository.findAvailableByBookIdAndUserId(bookId, userId);
+		Inventory inventory = inventoryRepository.findAvailableByBookId(bookId);
 		
 		if(inventory != null) {
 			//Update inventory
 			inventory.setDateBorrow(new Date(System.currentTimeMillis()));
 			inventory.setStatus(LibraryConstants.STATUS_BORROWED);
+			inventory.setUserId(userId);
 			inventoryRepository.save(inventory);
-			responseEntity = new ResponseEntity<Inventory>(HttpStatus.OK).of(Optional.of(inventory));
+			responseEntity = ResponseEntity.of(Optional.of(inventory));
+			responseEntity.status(HttpStatus.OK);
 		} else {
 			responseEntity = new ResponseEntity<Inventory>(HttpStatus.NOT_FOUND);
 		}

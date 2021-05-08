@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.hcl.hcllibrary.entity.Book;
 import com.hcl.hcllibrary.entity.Inventory;
 import com.hcl.hcllibrary.repository.BookRepository;
+import com.hcl.hcllibrary.repository.InventoryRepository;
 import com.hcl.hcllibrary.utils.LibraryConstants;
 
 @Service
@@ -15,6 +16,9 @@ public class AddBook {
 
 	@Autowired
 	private BookRepository bookRepository;
+	
+	@Autowired
+	private InventoryRepository inventoryRepository;
 	
 	public ResponseEntity<Book> addBook(JsonNode request) {
 		ResponseEntity<Book> response = null;
@@ -43,6 +47,7 @@ public class AddBook {
 			inventory.setStatus(LibraryConstants.STATUS_AVAILABLE);
 			
 			
+			inventoryRepository.save(inventory);
 		}
 		
 		return response;

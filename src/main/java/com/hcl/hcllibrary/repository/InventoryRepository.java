@@ -19,5 +19,7 @@ public interface InventoryRepository extends JpaRepository<Inventory, Long>{
 	@Query("SELECT i FROM INVENTORY i WHERE i.bookId = :bookId AND i.userId = :userId AND i.status = 'AVAILABLE'")
 	Inventory findAvailableByBookIdAndUserId(@Param("bookId") Long bookId, @Param("userId") Long userId);
 	
+	@Query("SELECT i FROM INVENTORY i WHERE i.bookId = :bookId AND i.status = 'AVAILABLE'")
+	Inventory findAvailableByBookId(@Param("bookId") Long bookId);
 	
 }

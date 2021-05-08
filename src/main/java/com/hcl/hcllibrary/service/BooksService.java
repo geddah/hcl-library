@@ -1,6 +1,4 @@
-package com.hcl.hcllibrary.Services;
-
-
+package com.hcl.hcllibrary.service;
 
 import com.hcl.hcllibrary.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
