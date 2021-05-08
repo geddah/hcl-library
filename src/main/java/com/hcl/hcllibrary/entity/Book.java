@@ -2,6 +2,7 @@ package com.hcl.hcllibrary.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity(name = "BOOK")
@@ -10,6 +11,7 @@ public class Book {
 	@Column(name = "isdn")
 	private String isdn;
 	@Id
+	@GeneratedValue
 	private Long bookId;
 
 	@Column(name = "title")
