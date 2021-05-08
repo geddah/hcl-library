@@ -1,6 +1,6 @@
 package com.hcl.hcllibrary.Controllers;
 
-import com.hcl.hcllibrary.Repository.BookRepository;
+import com.hcl.hcllibrary.repository.BookRepository;
 
 import com.hcl.hcllibrary.Services.BooksService;
 

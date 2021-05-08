@@ -2,7 +2,7 @@ package com.hcl.hcllibrary.Services;
 
 
 
-import com.hcl.hcllibrary.Repository.BookRepository;
+import com.hcl.hcllibrary.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
