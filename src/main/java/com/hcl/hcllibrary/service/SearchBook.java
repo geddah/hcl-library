@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class SearchBook {
 
-	public Object searchBook(String title) {
+	public Object searchBook(String title, String category, String author) {
 		return null;
 	}
 }
