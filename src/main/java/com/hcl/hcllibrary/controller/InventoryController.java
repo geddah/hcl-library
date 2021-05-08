@@ -16,7 +16,7 @@ public class InventoryController {
 	@Autowired
 	private AddBook addBook;
 	
-	@PostMapping("/addBook")
+	@PostMapping("/book")
 	public ResponseEntity<Book> addBook(@RequestBody JsonNode request){
 		return addBook.addBook(request);
 	}
