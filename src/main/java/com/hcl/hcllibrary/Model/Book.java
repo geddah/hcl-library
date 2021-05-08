@@ -8,13 +8,17 @@ import javax.persistence.Id;
 public class Book {
     @Id
     private Long books_ISDN;
+
+
+
     private String uUID;
     private String title;
     private String author;
     private String category;
     private String edition;
     private String rack_No;
-
+    public Book() {
+    }
     public Long getBooks_ISDN() {
         return books_ISDN;
     }

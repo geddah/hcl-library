@@ -8,10 +8,14 @@ public class Users {
     @Id
     private Long UserID;
     private String username;
+
+
     private String password;
     private String firstname;
     private String lastname;
     private String email;
+    public Users() {
+    }
 
     public Long getUserID() {
         return UserID;

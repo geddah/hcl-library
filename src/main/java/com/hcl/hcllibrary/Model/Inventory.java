@@ -12,7 +12,12 @@ public class Inventory {
     private String status;
     private String date_borrow;
     private String date_return;
+
+
+
     private String total_fees;
+    public Inventory() {
+    }
 
     public Long getBooks_UUID() {
         return Books_UUID;
